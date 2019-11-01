@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class JavaTest_1031
 {
 	public static void main(String[] args)
@@ -78,20 +79,31 @@ public class JavaTest_1031
 		System.out.println(index);
 		*/
 		
-		int n=3;
-		int[] a = { 1, 2, 3, 4, 5, 6 };
-		int index = -1;
-		for( int i = 0; i < a.length; i++ ) 
-		{
-			System.out.println("检查之前");
-			if(a[i] == n)
-			{
-				index = i;
-				break;
-			}
-			System.out.println("检查之后");
+		// int n=3;
+		// int[] a = { 1, 2, 3, 4, 5, 6 };
+		// int index = -1;
+		// for( int i = 0; i < a.length; i++ ) 
+		// {
+			// System.out.println("检查之前");
+			// if(a[i] == n)
+			// {
+				// index = i;
+				// break;
+			// }
+			// System.out.println("检查之后");
+		// }
+		// System.out.println(index);
+		
+		
+		Scanner scanner = new Scanner(System.in);
+		while ( scanner.hasNext()){
+			// String s = scanner.next();    //空格换行
+			String s = scanner.nextLine();   //输出一串
+			System.out.println(s);
 		}
-		System.out.println(index);
+		
+		
+		
 		
 	}
 
