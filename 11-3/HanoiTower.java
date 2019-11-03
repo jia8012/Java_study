@@ -5,11 +5,11 @@ public class HanoiTower{
 		}else{
 			int other = 3 - from - to;
 			hanoi(n - 1, from, other);
-			System.out.printf("从 %d 移动到 %d %n", from, other);
-			hanoi(n - 1, other, from);
+			System.out.printf("从 %d 移动到 %d %n", from, to);
+			hanoi(n - 1, other, to);
 		}
 	}
 	public static void main(String[] args){
-		hanoi(2,0,2);
+		hanoi(3,0,2);
 	}
 }
