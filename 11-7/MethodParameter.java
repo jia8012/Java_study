@@ -72,11 +72,12 @@ public class MethodParameter{
 		// bubbleSort(a);
 		// bubbleSort(b);
 		// bubbleSort(c);
-		// bubbleSort(d);
+		// bubbleSort(d);   
 		// System.out.println(Arrays.toString(a));
 		// System.out.println(Arrays.toString(b));
 		// System.out.println(Arrays.toString(c));
 		// System.out.println(Arrays.toString(d));
+		
 		//System.out.println(binarySearch(a,5));
 		int[] e = { 1, 2, 3, 4, 5 };
 		System.out.println(Arrays.toString(copyOf(e, 3)));
