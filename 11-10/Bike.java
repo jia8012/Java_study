@@ -1,8 +1,9 @@
+//访问限定符够用就行  属性收紧
 public class Bike{
 	//属性
-	String color;  //颜色
- 	int nowV;      //当前速度
-	int maxV;     //最高速度
+	private String color;  //颜色
+ 	private int nowV;      //当前速度
+	private int maxV;     //最高速度
 	
 	//构造器（构造方法）
 	Bike(){
@@ -18,6 +19,7 @@ public class Bike{
 	}
 	
 	//方法
+	//setter
 	void setColor(String color){  //设置颜色
 		this.color = color;
 	}
@@ -31,9 +33,12 @@ public class Bike{
 		nowV -=10;
 		if(nowV < 0)    nowV = 0;
 	}
-	String getColor(){
+	
+	//getter方法
+	String getColor(/*Bike this*/){
 		return color;
 	}
+	
 	int getNowV(){
 		return nowV;
 	}

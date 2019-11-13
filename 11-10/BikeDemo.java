@@ -10,7 +10,7 @@ public class BikeDemo{
 		System.out.println(bike.getColor());
 		
 		System.out.println("下坡");
-		bike.vUp = 60000;
+		//bike.vUp = 60000;
 		for(int i = 0; i < 22; i++){
 			bike.vUp();
 			System.out.println(bike.getNowV());
