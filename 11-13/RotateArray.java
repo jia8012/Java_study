@@ -8,8 +8,12 @@ public class RotateArray{
 	//构造方法
 	public RotateArray(){
 		int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-		this.array = array;
-		size = 10;
+		// this.array = array;
+		// size = 10;
+		System.out.println("请输入数组长度：（1-10）");
+		Scanner num = new Scanner(System.in);
+		this.size = num.nextInt();
+		this.array = Arrays.copyOfRange(array, 0, size);
 	}
 	
 	//方法
