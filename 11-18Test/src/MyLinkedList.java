@@ -99,6 +99,25 @@ public class MyLinkedList {
             return head;
         }
     }
+    //删除链表中的val
+    public static Node removeElements(Node head, int val){
+        Node prev = null;
+        Node cur = head;
+        while(cur != null){
+            if(cur.val == val){
+                if (head.val == val){
+                    head = head.next;
+                } else {
+                    prev.next = cur.next;
+                }
+            } else {
+                prev = cur;
+            }
+            cur = cur.next;
+        }
+
+        return head;
+    }
 
     public static void main(String[] args) {
 //        Node head = buildLinkedListhand();
@@ -120,24 +139,32 @@ public class MyLinkedList {
 //        printLinkedList(head);
 //        Node head = buildLinkedListhand();
 //        printPartList(head);
+//        Node head = null;
+//        head = pushBack(head,1);
+//        head = pushBack(head,2);
+//        head = pushBack(head,3);
+//        head = pushBack(head,4);
+//        head = pushBack(head,5);
+//        printLinkedList(head);
+//
+//        head = popBack(head);
+//        head = popBack(head);
+//        head = popBack(head);
+//        head = popBack(head);
+//        printLinkedList(head);
+//
+//        head = popBack(head);
+//        printLinkedList(head);
+//
+//        head = popBack(head);
+//        printLinkedList(head);
         Node head = null;
-        head = pushBack(head,1);
-        head = pushBack(head,2);
+        head = pushBack(head,6);
         head = pushBack(head,3);
-        head = pushBack(head,4);
-        head = pushBack(head,5);
-        printLinkedList(head);
-
-        head = popBack(head);
-        head = popBack(head);
-        head = popBack(head);
-        head = popBack(head);
-        printLinkedList(head);
-
-        head = popBack(head);
-        printLinkedList(head);
-
-        head = popBack(head);
+        head = pushBack(head,6);
+        head = pushBack(head,3);
+        head = pushBack(head,6);
+        head = removeElements(head, 6);
         printLinkedList(head);
     }
 }
