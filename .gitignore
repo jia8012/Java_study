@@ -26,3 +26,10 @@ hs_err_pid*
 
 *.zip
 *.png
+
+# IntelliJ IDEA Files
+
+*.iml
+*.ipr
+*.iws
+*.idea
