@@ -38,6 +38,16 @@ public class TeacherUser extends User {
     }
 
     private void removeBook() {
+        System.out.println("请输入书名");
+        Scanner scanner = new Scanner(System.in);
+        String downTitle = scanner.nextLine();
+        BookShelf bookShelf = BookShelf.getInstance();
+        if (bookShelf.biJiao(downTitle)) {
+            bookShelf.remove(downTitle);
+            System.out.println("下架成功");
+        }else {
+            System.out.println("系统出错了");
+        }
 
     }
 
