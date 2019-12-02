@@ -13,6 +13,17 @@ public class BookShelf {
     Book[] array = new Book[100];
     int size;
 
+    public Book lookAndBack(String title) {
+        int count;
+        for (count = 0; count < size; count++) {
+            if (array[count].title.equals(title)) {
+                break;
+            }
+        }
+        return array[count];
+
+    }
+
     public void add(Book book) {
         array[size++] = book;
     }
