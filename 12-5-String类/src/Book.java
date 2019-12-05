@@ -44,12 +44,15 @@ class Book implements Comparable<Book> {
 		if (line.equalsIgnoreCase("价格")) {
 			//按价格比较
 			int r = book1.compareTo(book2);
+			System.out.println(r);
 		} else if (line.equalsIgnoreCase("书名")) {
 			Comparator<Book> c = new BookComparartor();
 			int r = c.compare(book1,book2);
+			System.out.println(r);
 		} else if (line.equalsIgnoreCase("作者")) {
 			Comparator<Book> c = new AuthorComparator();
 			int r = c.compare(book1,book2);
+			System.out.println(r);
 		}
 
 
