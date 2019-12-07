@@ -63,6 +63,6 @@ public class SelectSort {
 		char[] charArray2 = {'t', 'i', 'm', 'e' };
 		String a1 = new String(charArray, 2, 2);
 		System.out.println(a1);
-		System.out.println(a.concat(a1)); 
+		System.out.println(a.concat(a1));
 	}
 }
