@@ -1,5 +1,6 @@
 package Queue;
 
+//用线性表实现环形队列
 class MyCircularQueue {
 	private int[] array;
 	private int size;

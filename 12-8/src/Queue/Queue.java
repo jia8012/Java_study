@@ -1,5 +1,6 @@
 package Queue;
 
+//用链表实现队列
 class Node {
 	int val;
 	Node next;

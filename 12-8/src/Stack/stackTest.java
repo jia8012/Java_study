@@ -1,7 +1,8 @@
-package Queue;
+package Stack;
 
 import java.util.Arrays;
 
+//用线性表实现栈
 class Stack{
 	int[] array;
 	int size;
