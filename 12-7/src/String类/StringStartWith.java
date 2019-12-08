@@ -77,7 +77,7 @@ public class StringStartWith {
 		System.out.println("字母x的大写：" + a1);
 		System.out.println(String.format("%%"));
 		System.out.println(String.format("天才是由%d%%的灵感和%d%%的汗水。",1,99));
-		
+
 
 	}
 }
