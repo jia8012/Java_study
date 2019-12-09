@@ -23,22 +23,22 @@ class MyQueue {
 	public int pop() {  //删除队列首元素
 		if (stack2.isEmpty()) {
 			int size = stack.size();
-			for (int i = 1; i < size; i++) {
+			for (int i = 0; i < size; i++) {
 				stack2.push(stack.pop());
 			}
 		}
-		return stack.pop();
+		return stack2.pop();
 	}
 
 	/** Get the front element. */
 	public int peek() {  //返回队列首元素
 		if (stack2.isEmpty()) {
 			int size = stack.size();
-			for (int  i = 1; i < size; i++) {
+			for (int  i = 0; i < size; i++) {
 				stack2.push(stack.pop());
 			}
 		}
-		return stack.peek();
+		return stack2.peek();
 
 	}
 
@@ -52,12 +52,16 @@ class MyQueue {
 		MyQueue queue = new MyQueue();
 		queue.push(1);
 		queue.push(2);
-		System.out.println(queue.peek());  // 返回 1
+		System.out.println(queue.peek());  // 获取队列首 返回 1
+		System.out.println(queue.pop());   // 删除队列首元素  返回1
 		queue.push(3);
-		System.out.println(queue.peek());  // 返回3
-		System.out.println(queue.pop());   // 返回 1
-		System.out.println(queue.empty()); // 返回 false
-
+		System.out.println(queue.pop());   // 删除队列首元素  返回2
+		System.out.println(queue.peek());  // 获取队列首元素  返回3
+		System.out.println(queue.pop());   // 删除队列首元素  返回3
+		queue.push(4);
+		System.out.println(queue.empty()); // 返回   false
+		System.out.println(queue.peek());  // 获取队列首元素  返回4
+		System.out.println(queue.empty()); // 返回   false
 	}
 }
 
