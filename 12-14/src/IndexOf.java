@@ -1,4 +1,4 @@
-public class indexOf {
+public class IndexOf {
 
 	public static void myIndexOf(String a, String b) {
 		if (a.contains(b)) {

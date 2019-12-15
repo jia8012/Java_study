@@ -1,4 +1,4 @@
-public class myReplace {
+public class MyReplace {
 	//实现replace
 	//bug:想替换的字符串的第一个字符不能出现在原字符串的第一个字符
 	public static String myReplace(String a, String b,String c) {

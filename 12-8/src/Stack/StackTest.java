@@ -32,7 +32,7 @@ class Stack{
 		return array[--size];
 	}
 }
-public class stackTest {
+public class StackTest {
 
 
 	public static void main(String[] args) {

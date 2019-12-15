@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class mySplit {
+public class MySplit {
 	public static char[] mySplit(String a, char b, char c) {
 		char[] a1 = a.toCharArray();
 		for (int  i = 0; i < a1.length; i++) {
