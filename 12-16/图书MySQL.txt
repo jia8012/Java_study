@@ -1,0 +1,7 @@
+create table book
+(
+	title varchar(10),  //书名
+	author varchar(10),  //作者
+	price int,  //价格
+	category varchar(10)   //分类
+);

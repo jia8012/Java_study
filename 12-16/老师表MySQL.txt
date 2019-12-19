@@ -1,0 +1,11 @@
+create table teacher
+(
+	name varchar(10),  //名字
+	age int,   //年龄
+	high int,   //身高
+	weight int,  //体重
+	sex varchar(2),  //性别
+	degree varchar(4),  //学历
+	birthday varchar(10),  //生日
+	IDCard varchar(18)  //身份证号
+);
