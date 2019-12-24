@@ -1,9 +1,9 @@
 import java.util.Scanner;
 class BankerClass {
 
-	int[] Available = {10, 8, 7};
+	int[] Available = {3, 3, 2};
 	int[][] Max = new int[3][3];
-	int[][] Alloction = new int[3][3];
+	int[][] Allocation = new int[3][3];
 	int[][] Need = new int[3][3];
 	int[][] Request = new int[3][3];
 	int[] Work = new int[3];
@@ -17,7 +17,7 @@ class BankerClass {
 	}
 	public void setSystemVariable(){//设置各初始系统变量，并判断是否处于安全状态。
 		setMax();
-		setAlloction();
+		setAllocation();
 		printSystemVariable();
 		SecurityAlgorithm();
 	}
@@ -32,24 +32,24 @@ class BankerClass {
 		}
 	}
 
-	public void setAlloction() {//设置已分配矩阵Alloction
+	public void setAllocation() {//设置已分配矩阵Alloction
 		System.out.println("请设置请各进程分配矩阵Alloction：");
 		for (int i = 0; i < 3; i++) {
 			System.out.println("晴输入进程P" + i + "的分配资源量：");
 			for (int j = 0; j < 3; j++) {
-				Alloction[i][j] = in.nextInt();
+				Allocation[i][j] = in.nextInt();
 			}
 		}
 		System.out.println("Available=Available-Alloction.");
 		System.out.println("Need=Max-Alloction.");
 		for (int i = 0; i < 3; i++) {//设置Alloction矩阵
 			for (int j = 0; j < 3; j++) {
-				Available[i] = Available[i] - Alloction[j][i];
+				Available[i] = Available[i] - Allocation[j][i];
 			}
 		}
 		for (int i = 0; i < 3; i++) {//设置Need矩阵
 			for (int j = 0; j < 3; j++) {
-				Need[i][j] = Max[i][j] - Alloction[i][j];
+				Need[i][j] = Max[i][j] - Allocation[i][j];
 			}
 		}
 	}
@@ -64,7 +64,7 @@ class BankerClass {
 			}
 			System.out.print("|  ");
 			for(int j=0;j<3;j++){
-				System.out.print(Alloction[i][j]+"  ");
+				System.out.print(Allocation[i][j]+"  ");
 			}
 			System.out.print("|  ");
 			for(int j=0;j<3;j++){
@@ -101,7 +101,7 @@ class BankerClass {
 			if (Request[num][0] <= Available[0] && Request[num][1] <= Available[1] && Request[num][2] <= Available[2]) {//判断Request是否小于Alloction
 				for (int i = 0; i < 3; i++) {
 					Available[i] -= Request[num][i];
-					Alloction[num][i] += Request[num][i];
+					Allocation[num][i] += Request[num][i];
 					Need[num][i] -= Request[num][i];
 				}
 
@@ -133,7 +133,7 @@ class BankerClass {
 		boolean flag = true;
 		while (count < 3) {
 			if(flag){
-				System.out.println("进程  "+"   Work  "+"   Alloction "+"    Need  "+"     Work+Alloction ");
+				System.out.println("进程  "+"   Work  "+"   Allocation "+"    Need  "+"     Work+Allocation ");
 				flag = false;
 			}
 			for (int i = 0; i < 3; i++) {
@@ -145,14 +145,14 @@ class BankerClass {
 					}
 					System.out.print("|  ");
 					for (int j = 0; j<3;j++){
-						Work[j]+=Alloction[i][j];
+						Work[j]+=Allocation[i][j];
 					}
 					Finish[i]=true;//当当前进程能满足时
 					S[count]=i;//设置当前序列排号
 
 					count++;//满足进程数加1
 					for(int j=0;j<3;j++){
-						System.out.print(Alloction[i][j]+"  ");
+						System.out.print(Allocation[i][j]+"  ");
 					}
 					System.out.print("|  ");
 					for(int j=0;j<3;j++){
