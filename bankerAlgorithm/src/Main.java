@@ -14,12 +14,13 @@ public class Main {
 		for (int i = 0; i < resourceNum; i++) {
 			Available[i] = scanner.nextInt();
 		}
+		
 
 		Init init = new Init();   //初始化进程信息
-		init.Initialization(processes, resourceNum);
+		init.initialization(processes, resourceNum);
 
 		Show s = new Show();    //展示进程信息
-		s.Show(processes, resourceNum, Available);
+		s.show(processes, resourceNum, Available);
 
 		Safe safe = new Safe();  //判断安全是否安全，如果安全输出安全序列，否则告诉不安全
 		safe.Safe(processes, Available, resourceNum);

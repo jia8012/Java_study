@@ -47,7 +47,7 @@ public class Banker {
 		}
 		if (T == true) {
 			Show show = new Show();
-			show.Show(processes, resourceNum, Available);
+			show.show(processes, resourceNum, Available);
 			System.out.println("现在进入安全算法：");
 			Safe safe = new Safe();
 			safe.Safe(processes,Available, resourceNum);
@@ -57,7 +57,7 @@ public class Banker {
 					processes[num].allocation[i] -= request[i];
 					processes[num].need[i] += request[i];
 				}
-				show.Show(processes,resourceNum,Available);
+				show.show(processes,resourceNum,Available);
 			}
 		}
 	}

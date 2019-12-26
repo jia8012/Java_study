@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 class Init {   //初始化进程信息
-	public void Initialization(Process[] processes, int resourceNum) {
+	public void initialization(Process[] processes, int resourceNum) {
 		Scanner scanner = new Scanner(System.in);
 
 		//初始化进程信息

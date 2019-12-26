@@ -37,7 +37,7 @@ class Safe{
 					}
 					System.out.println( "      < " + processes[i].name + " > 加入安全序列");
 					Show show = new Show();
-					show.Show(processes, resourceNum, work);
+					show.show(processes, resourceNum, work);
 					for (int j = 0; j < resourceNum; j++) {
 						work2[j] = work[j] - processes[i].allocation[j];
 					}
