@@ -14,7 +14,7 @@ public class Main {
 		for (int i = 0; i < resourceNum; i++) {
 			Available[i] = scanner.nextInt();
 		}
-		
+
 
 		Init init = new Init();   //初始化进程信息
 		init.initialization(processes, resourceNum);
@@ -22,8 +22,33 @@ public class Main {
 		Show s = new Show();    //展示进程信息
 		s.show(processes, resourceNum, Available);
 
+		//请求是否进行安全检查
+		System.out.println("进程展示完成。");
+		System.out.println("是否进行安全检查？     1、Yes   other、exit");
+		if (scanner.nextInt() != 1) {
+			System.out.println("程序退出中......");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			System.exit(0);
+		}
+
 		Safe safe = new Safe();  //判断安全是否安全，如果安全输出安全序列，否则告诉不安全
 		safe.Safe(processes, Available, resourceNum);
+
+		//请求分配
+		System.out.println("是否进行请求资源？    1、Yes    other、Exit");
+		if (scanner.nextInt() != 1) {
+			System.out.println("程序退出中......");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			System.exit(0);
+		}
 
 		Request request = new Request();
 		request.request(processes,resourceNum,Available);

@@ -35,6 +35,7 @@ class Safe{
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
+
 					System.out.println( "      < " + processes[i].name + " > 加入安全序列");
 					Show show = new Show();
 					show.show(processes, resourceNum, work);

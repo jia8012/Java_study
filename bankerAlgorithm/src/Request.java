@@ -11,6 +11,8 @@ public class Request {
 			for (int i = 0; i < resourceNum; i++) {
 				request[i] = scanner.nextInt();
 			}
+
+			//再次请求分配时finfish都改为ture
 			for (int i = 0; i < processes.length; i++) {
 				processes[i].finish = false;
 			}
@@ -18,7 +20,14 @@ public class Request {
 			banker.banker(processes, request, resourceNum, Available, num);
 			System.out.println("是否继续请求分配：");
 			System.out.println("1/Y  2/N");
+
 			if (scanner.nextInt() != 1) {
+				System.out.println("程序退出中......");
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 				System.exit(0);
 			}
 		}

@@ -5,11 +5,5 @@ class Process {
 	int[] need;   //还需要的资源数
 	boolean finish = false;
 
-	Process(String name, int[] max, int[] allocation){
-		this.name = name;
-		this.max = max;
-		this.allocation = allocation;
-	}
 	Process(){}
-
 }
