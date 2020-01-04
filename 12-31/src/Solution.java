@@ -109,4 +109,42 @@ public class Solution {
 		return n;
 	}
 
+
+
+	//两两交换链表中的节点
+	public class ListNode {
+		int val;
+		ListNode next;
+		ListNode(int x) {
+			val = x;
+		}
+	}
+	//方法一
+	public ListNode SwapPairs(ListNode head) {
+		while (head == null || head.next == null) {
+			return head;
+		}
+		ListNode node = new ListNode(-1);
+		ListNode res = node;
+		while (head != null && head.next != null) {
+			node.next = head.next;
+			head.next = head.next.next;
+			node.next.next = head;
+
+			node = node.next.next;
+			head = head.next;
+
+		}
+		return res.next;
+	}
+	//方法二（递归）
+	public ListNode swapPairs(ListNode head) {
+		while (head == null || head.next == null) {
+			return head;
+		}
+		ListNode node = head.next;
+		head.next = swapPairs(node.next);
+		node.next = head;
+		return node;
+	}
 }
