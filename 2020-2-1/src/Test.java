@@ -26,5 +26,17 @@ public class Test {
 		}
 	}
 
-	//
+	//长按键入
+	public boolean isLongPressedName(String name, String type) {
+		int j = 0;
+		for (int i = 0; i < type.length(); i++) {
+			if (name.charAt(j) == type.charAt(i)) {
+				j++;
+			}
+			if (j == name.length()){
+				break;
+			}
+		}
+		return j == name.length() ? true : false;
+	}
 }
