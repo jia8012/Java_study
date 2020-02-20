@@ -77,7 +77,7 @@ class Solution {
 			set.add(elem);
 			if (set.size() > 3) set.remove(set.first());
 		}
-		return set.size() < 3 ? set.last() : set.first();   
+		return set.size() < 3 ? set.last() : set.first();
 	}
 
 
