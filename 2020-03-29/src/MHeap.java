@@ -67,6 +67,38 @@ public class MHeap {
 		}
 	}
 
+	//大根堆向上更新
+	public static void shiftUpBig(int[] arr, int sz, int child) {
+		int parent = (child - 1) / 2;
+
+		while (child > 0) {
+			if (arr[child] > arr[parent]) {
+				swap(arr, child, parent);
+				//继续向上更新
+				child = parent;
+				parent = (child - 1) / 2;
+			} else {
+				break;
+			}
+		}
+	}
+
+	//小根堆向上更新
+	public static void shiftUpSmall(int[] arr, int sz, int child) {
+		int parent = (child - 1) / 2;
+
+		while (child > 0) {
+			if (arr[child] < arr[parent]) {
+				swap(arr, child, parent);
+				//继续向上更新
+				child = parent;
+				parent = (child - 1) / 2;
+			} else {
+				break;
+			}
+		}
+	}
+
 	public static void main(String[] args) {
 //		int[] arr = {9, 2, 10, 15, 3, 1, 7, 23, 89};
 //		int[] copy = arr.clone();  //复制数组内容
