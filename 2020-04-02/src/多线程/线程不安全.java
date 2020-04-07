@@ -15,7 +15,7 @@ public class 线程不安全 {
 	static class Sub extends Thread {
 		@Override
 		public void run() {
-			for (int i = 0; i < 100000; i--) {
+			for (int i = 0; i < 100000; i++) {
 				n--;
 			}
 		}
