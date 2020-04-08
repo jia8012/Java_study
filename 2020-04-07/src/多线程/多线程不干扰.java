@@ -1,11 +1,11 @@
 package 多线程;
 
 public class 多线程不干扰 {
-	private static long N = 1_0000_0000;
+	private static long N = 1_0000_0000;  //静态属性，共享的，没修改
 	private static class 计算线程 extends Thread {
 		@Override
 		public void run() {
-			long n = 0;
+			long n = 0;  // 有修改，是局部变量，不共享
 			for (int i = 0; i < N; i++) {
 				n += i;
 			}
